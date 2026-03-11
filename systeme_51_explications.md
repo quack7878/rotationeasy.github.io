@@ -64,3 +64,26 @@ Le passeur est à l'avant droite.
 *   **Explication :** C'est la position la plus simple pour un passeur en zone avant. Il est déjà dans sa "cible". Les attaquants s'organisent autour de lui.
 
 ---
+
+## L'Erreur de Position
+Une **erreur de position** (souvent appelée "faute de position") survient lorsqu'un joueur n'est pas à sa place réglementaire sur le terrain au moment précis où le serveur frappe le ballon.
+
+### Les règles de placement :
+*   **Verticalement (Devant/Derrière) :** Chaque joueur de la ligne avant doit avoir au moins une partie de son pied plus proche du filet que les pieds du joueur de la ligne arrière correspondant (ex: le Poste 4 doit être devant le Poste 5).
+*   **Horizontalement (Gauche/Droite) :** Le joueur central de chaque ligne doit être entre ses deux partenaires de ligne (ex: le Poste 6 doit être entre le Poste 5 et le Poste 1).
+
+### Conséquences :
+1.  L'équipe commettant l'erreur perd l'échange.
+2.  Un point est accordé à l'adversaire.
+3.  L'adversaire gagne (ou garde) le service.
+4.  Les joueurs doivent reprendre leurs positions correctes.
+
+---
+
+## Accéder à l'application
+Vous pouvez retrouver cet outil interactif en ligne pour simuler les rotations et les switches :
+
+**URL :** [https://rotationeasy.github.io/](https://rotationeasy.github.io/)
+
+**QR Code :**
+![QR Code vers RotationEasy](images/qr-code.png)
