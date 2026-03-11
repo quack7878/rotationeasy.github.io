@@ -26,39 +26,39 @@ Le système **5-1** est l'un des systèmes de jeu les plus utilisés au volleyba
 ## Les 6 Rotations (Réception de Service)
 
 ### Rotation 1 (Passeur en Poste 1)
-![Rotation 1](images/rotation-000.png)
-![Rotation 1 Alternative](images/rotation-001.png)
+<img src="images/rotation-000.png" width="300" alt="Rotation 1">
+<img src="images/rotation-001.png" width="300" alt="Rotation 1 Alternative">
 
 Le passeur est à l'arrière droite. C'est la position de départ classique.
 *   **Explication :** Le passeur se cache derrière le Réceptionneur-Attaquant (OH) pour monter rapidement au filet dès le service adverse. Le Pointu (OPP) est en poste 4 (devant gauche).
 
 ### Rotation 2 (Passeur en Poste 6)
-![Rotation 2](images/rotation-002.png)
+<img src="images/rotation-002.png" width="300" alt="Rotation 2">
 
 Le passeur est au centre de la zone arrière.
 *   **Explication :** Pour éviter le chevauchement, le passeur reste derrière le Central (MB). Les deux OH et le Libero couvrent la réception. Le passeur doit courir entre les joueurs pour atteindre la zone de passe.
 
 ### Rotation 3 (Passeur en Poste 5)
-![Rotation 3](images/rotation-003.png)
-![Rotation 3 Alternative](images/rotation-004.png)
+<img src="images/rotation-003.png" width="300" alt="Rotation 3">
+<img src="images/rotation-004.png" width="300" alt="Rotation 3 Alternative">
 
 Le passeur est à l'arrière gauche.
 *   **Explication :** C'est souvent une rotation délicate. Le passeur doit traverser tout le terrain pour arriver à sa position de passe habituelle (entre le poste 2 et 3). On "pousse" souvent le OH vers la droite pour libérer le couloir au passeur.
 
 ### Rotation 4 (Passeur en Poste 4) - Passeur en Zone Avant
-![Rotation 4](images/rotation-005.png)
+<img src="images/rotation-005.png" width="300" alt="Rotation 4">
 
 Le passeur passe devant. Il n'y a plus que 2 attaquants en zone avant (le Central et l'OH).
 *   **Explication :** Le passeur est déjà près du filet. Le Pointu (OPP) est maintenant à l'arrière et peut attaquer derrière la ligne des 3 mètres ("attaque aux 3 mètres").
 
 ### Rotation 5 (Passeur en Poste 3)
-![Rotation 5](images/rotation-006.png)
+<img src="images/rotation-006.png" width="300" alt="Rotation 5">
 
 Le passeur est au centre du filet.
 *   **Explication :** Le passeur est idéalement placé. Le Central (MB) se décale légèrement pour ne pas gêner, et l'OH de devant se prépare à l'aile gauche.
 
 ### Rotation 6 (Passeur en Poste 2)
-![Rotation 6](images/rotation-007.png)
+<img src="images/rotation-007.png" width="300" alt="Rotation 6">
 
 Le passeur est à l'avant droite.
 *   **Explication :** C'est la position la plus simple pour un passeur en zone avant. Il est déjà dans sa "cible". Les attaquants s'organisent autour de lui.
@@ -83,7 +83,7 @@ Une **erreur de position** (souvent appelée "faute de position") survient lorsq
 ## Accéder à l'application
 Vous pouvez retrouver cet outil interactif en ligne pour simuler les rotations et les switches :
 
-**URL :** [https://rotationeasy.github.io/](https://rotationeasy.github.io/)
+**URL :** [https://aricourcy.github.io/rotationeasy.github.io/](https://aricourcy.github.io/rotationeasy.github.io/)
 
 **QR Code :**
-![QR Code vers RotationEasy](images/qr-code.png)
+<img src="images/qr-code.png" width="150" alt="QR Code vers RotationEasy">
