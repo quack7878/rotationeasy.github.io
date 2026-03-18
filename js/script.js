@@ -65,9 +65,9 @@ const SYSTEMS = {
             { id: 5, role: 'mb', label: 'MB2' }
         ],
         reception: {
-            1: { 0: { x: 330, y: 140 }, 1: { x: 330, y: 110 }, 2: { x: 200, y: 100 }, 3: { x: 60, y: 100 }, 4: { x: 80, y: 380 }, 5: { x: 210, y: 380 } },
+            1: { 0: { x: 350, y: 410 }, 1: { x: 330, y: 380 }, 2: { x: 200, y: 100 }, 3: { x: 60, y: 100 }, 4: { x: 80, y: 380 }, 5: { x: 210, y: 380 } },
             2: { 0: { x: 200, y: 140 }, 1: { x: 330, y: 380 }, 2: { x: 330, y: 100 }, 3: { x: 200, y: 110 }, 4: { x: 70, y: 380 }, 5: { x: 200, y: 380 } },
-            3: { 0: { x: 70, y: 140 }, 1: { x: 200, y: 380 }, 2: { x: 330, y: 380 }, 3: { x: 330, y: 100 }, 4: { x: 200, y: 100 }, 5: { x: 70, y: 110 } },
+            3: { 0: { x: 90, y: 410 }, 1: { x: 200, y: 380 }, 2: { x: 330, y: 380 }, 3: { x: 330, y: 100 }, 4: { x: 200, y: 100 }, 5: { x: 70, y: 380 } },
             4: { 0: { x: 60, y: 110 }, 1: { x: 80, y: 380 }, 2: { x: 210, y: 380 }, 3: { x: 330, y: 380 }, 4: { x: 330, y: 110 }, 5: { x: 200, y: 100 } },
             5: { 0: { x: 200, y: 110 }, 1: { x: 130, y: 250 }, 2: { x: 70, y: 380 }, 3: { x: 200, y: 380 }, 4: { x: 330, y: 380 }, 5: { x: 330, y: 100 } },
             6: { 0: { x: 330, y: 110 }, 1: { x: 200, y: 100 }, 2: { x: 70, y: 100 }, 3: { x: 70, y: 380 }, 4: { x: 210, y: 380 }, 5: { x: 330, y: 380 } }
@@ -138,8 +138,9 @@ const SYSTEMS = {
 
 // Charger les noms des joueuses
 async function loadPlayerNames() {
+    const filename = currentSystem === '5-1' ? 'players.json' : 'players_42.json';
     try {
-        const response = await fetch('players.json');
+        const response = await fetch(filename);
         allPlayerSets = await response.json();
     } catch (e) {
         console.error("Erreur chargement noms:", e);
@@ -148,7 +149,7 @@ async function loadPlayerNames() {
             "set2": { "0":"S1-2", "1":"OH1-2", "2":"MB1-2", "3":"S2-2", "4":"OH2-2", "5":"MB2-2" }
         };
     }
-    updateUI();
+    render();
 }
 
 // --- Logique de Calcul des Coordonnées ---
@@ -204,6 +205,9 @@ function getDefenseTarget(playerIndex, rotation) {
         if (player.role === 'mb') return TARGETS.DEFENSE.BLOCK_C;
         if (player.role === 's' || player.role === 'opp') return TARGETS.DEFENSE.BLOCK_R;
     } else {
+        // En 4-2, on ne switch pas à l'arrière
+        if (currentSystem === '4-2') return POS[posCode];
+        
         if (player.role === 's' || player.role === 'opp') return TARGETS.DEFENSE.S_OPP;
         if (player.role === 'mb') return TARGETS.DEFENSE.MB;
         if (player.role === 'oh') return TARGETS.DEFENSE.OH;
@@ -262,6 +266,7 @@ function drawPlayer(x, y, player, alpha = 1) {
     ctx.fillStyle = '#000';
     ctx.font = 'bold 12px Arial';
     ctx.textAlign = 'center';
+    
     const names = allPlayerSets[currentSet] || {};
     ctx.fillText(names[player.id] || "", x, y + 25);
     
@@ -353,6 +358,7 @@ document.querySelectorAll('.system-btn').forEach(btn => {
         currentSystem = e.target.dataset.system;
         isSwitched = false;
         progress = 0;
+        loadPlayerNames();
         updateUI();
     });
 });
